@@ -1,0 +1,60 @@
+<html>
+
+<title>Embrace Rehab</title>
+
+<head>
+
+<script src = "lib/jquery/jquery-2.2.1.min.js"></script>
+
+<!--BootStrap-->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--BootStrap_End-->
+
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<script type="text/javascript" src = "js/embraceRehabFrame.js" ></script>
+<script type="text/javascript">
+
+window.addEventListener("load",function(){
+
+	console.log("window_loaded!");
+
+});
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<div class = "app">
+
+	<div class = "container container2Xwide" id = "mainScroll" >
+		<div class="row">
+			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "to_do_panel" switchAim = "chat_panel">
+				to_do
+			</div>
+			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "chat_panel" switchAim = "to_do_panel">
+				chat
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+
+
+
+</html>

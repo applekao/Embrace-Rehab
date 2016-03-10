@@ -1,0 +1,45 @@
+/*main.css*/
+
+html{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	margin:0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+.app{
+	height:100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.row{
+	height: 100%;
+}
+
+.container{
+	height: 100%;
+}
+
+.container2Xwide{
+	width: 200% !important;
+	position: absolute;
+	height: 100%;
+	top:0px;
+	left:0px;
+	-webkit-transform: translate(-50%);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.panel{
+text-align: center;
+font-size:1.5em;
+height:100%;
+}
