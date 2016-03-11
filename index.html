@@ -2,6 +2,8 @@
 
 <title>Embrace Rehab</title>
 
+<meta name="viewport" content="user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, target-densitydpi=device-dpi">
+
 <head>
 
 <script src = "lib/jquery/jquery-2.2.1.min.js"></script>
@@ -20,13 +22,23 @@
 <!--BootStrap_End-->
 
 <link type="text/css" rel="stylesheet" href="css/main.css">
+<link type="text/css" rel="stylesheet" href="css/panels.css">
 <script type="text/javascript" src = "js/embraceRehabFrame.js" ></script>
+<script type="text/javascript" src = "js/to_do_template.js" ></script>
 <script type="text/javascript">
 
 window.addEventListener("load",function(){
 
 	console.log("window_loaded!");
 	anime.init();
+
+	//setTimeout(function(){
+
+	for(i = 0; i < 10; i++){
+		todo.createNew(testOption);
+	}
+	
+	//},2000);
 
 });
 
@@ -50,7 +62,13 @@ window.addEventListener("load",function(){
 	<div class = "container container2Xwide" id = "mainScroll" >
 		<div class="row">
 			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "to_do_panel" >
-				to_do
+				
+				<div id = "todoListBox">
+					<div id = "emptyHolder">All Clear</div>
+				</div>
+
+
+
 			</div>
 			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "chat_panel" >
 				chat
