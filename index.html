@@ -39,12 +39,19 @@ window.addEventListener("load",function(){
 
 <div class = "app">
 
+	<div class= "staticBar" id = "topNav" >
+		<div class = "container" id = "viewControlToggle">
+			<div class="col-md-6 col-sm-6 col-xs-6 col-xl-6 panelToggle" id = "toDoBnt" switchAim = "0">To-do</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 col-xl-6 panelToggle panelToggle_selected" id = "chatBnt" switchAim = "1">Chat</div>
+		</div>
+	</div>
+
 	<div class = "container container2Xwide" id = "mainScroll" >
 		<div class="row">
-			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "to_do_panel" switchAim = "chat_panel">
+			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "to_do_panel" >
 				to_do
 			</div>
-			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "chat_panel" switchAim = "to_do_panel">
+			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "chat_panel" >
 				chat
 			</div>
 		</div>

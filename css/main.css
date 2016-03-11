@@ -20,6 +20,44 @@ body{
 	overflow: hidden;
 }
 
+.staticBar{
+    width: 100%;
+}
+
+#topNav{
+    background-color: #FF6600;
+    padding-top: 20px;
+    height: 118px;
+    position: absolute;
+    z-index: 99;
+    left: 0px;
+    top:0px;
+}
+
+
+#viewControlToggle{
+	margin: auto;
+	border-radius: 8px;
+	background-color: rgba(255,255,255,0.25);
+	width: 60%;
+	height: 50%;
+	position: relative;
+	top: 25%;
+	padding: 0px;
+}
+
+.panelToggle{
+	text-align: center;
+	border-radius: 8px;
+	padding-top: 1.8%;
+	height: 100%;
+}
+
+.panelToggle_selected{
+	background-color: #FFF;
+	
+}
+
 .row{
 	height: 100%;
 }
@@ -42,4 +80,7 @@ body{
 text-align: center;
 font-size:1.5em;
 height:100%;
+padding-top: 128px;
 }
+
+
