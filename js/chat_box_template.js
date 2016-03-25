@@ -1,69 +1,58 @@
-var todo = {}
+var chat = {
 
-todo.todoList = [];
+	template : null,
 
-var testOption = {
-	name: "Walk 200 steps",
-	assign: "Louis",
-	due: 24,
-	content: "Walk 200 step after you pee.",
-	repeat: 24,
-	url: null
+	roll : {
+		reciver : "recive",
+		sender : "send"
+	}
+
+};
+
+
+chat.loadTemp = function( roll, message ){
+
+
+	var chatTemp = 
+					"<div class='panel panel-embrace-rehab chats " + roll + "' >"
+
+					+
+
+					message//Content
+
+					+ "<div class = 'cheerBnt'> Cheer </div>"
+
+					+ "</div>";
+		
+
+	$("#chatBox").append(chatTemp);
+	if($("#chatBox").children().length > 1){
+		document.getElementById('noMessageHolder').style.display = "none";
+	}
+
 }
 
-todo.createNew = function(option){
 
-todo.todoList[todo.todoList.length] = new todo.newTodoItem(option);
+chat.recive = function(message){
+
+	chat.loadTemp(chat.roll.reciver, message);
 
 }
 
-todo.newTodoItem = function(option){
+chat.send = function(message){
 
- 	//name, assign, due, content, reminder, url
-	// for( var key in options ){
-	// 	console.log( options[key] );
-	// }
-	this.option = option; 
+	chat.loadTemp(chat.roll.sender, message);
+	console.log("sdf");
 
- 	todo.newTodoItem.prototype.add = function(){
- 	var todoTemp = {
-			start:"<div class='panel panel-embrace-rehab' todoId='" + todo.todoList.length  + "''>",
-			heading:"<div class='panel-heading'>",
-			dueTime:"<div class='panel-body todoDueTime'>",
-			end:"</div>"
+}
+
+function chatTest(){
+	for(i = 0; i < 10; i++){
+		if( i % 2 ==0 ){
+			chat.recive("Hi!");
 		}
-
-		var newTodoItem = todoTemp.start +
-								todoTemp.heading + option.name + todoTemp.end +
-						    	todoTemp.dueTime + option.due + todoTemp.end; +
-						  todoTemp.end;
-		document.getElementById("todoListBox").innerHTML += newTodoItem;
-
-		todo.checkLength("add");
- 	}
-
- 	todo.newTodoItem.prototype.clear = function(){
- 		todo.checkLength();
- 	}
-
- 	todo.newTodoItem.prototype.add();
-
-}
-
-todo.checkLength = function(caller){
-	var currentLength = null;
-	if(caller == "add"){
-		currentLength = todo.todoList.length + 1;
-	}
-	else{
-		currentLength = todo.todoList.length;
-	}
-	if(currentLength == 0){
-		document.getElementById("emptyHolder").style.display = "block";
-	}
-	else{
-		document.getElementById("emptyHolder").style.display = "none";	
+		else{
+			chat.send("Yo!");
+		}
 	}
 }
-
-

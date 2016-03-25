@@ -12,8 +12,10 @@ anime.init = function(){
 	}
 }
 anime.switchToPanel = function(aim){
-document.getElementById("mainScroll").style.webkitTransform = 
-"translate(" + (parseInt(aim.attributes.switchAim.value) * (-50)) + "%)";
+document.getElementById("mainScroll").style.left = 
+(parseInt(aim.attributes.switchAim.value) * (-100)) + "%";
+// document.getElementById("mainScroll").style.webkitTransform = 
+// "translateX(" + (parseInt(aim.attributes.switchAim.value) * (-50)) + "%)";
 }
 
 

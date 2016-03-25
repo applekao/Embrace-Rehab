@@ -25,6 +25,7 @@
 <link type="text/css" rel="stylesheet" href="css/panels.css">
 <script type="text/javascript" src = "js/embraceRehabFrame.js" ></script>
 <script type="text/javascript" src = "js/to_do_template.js" ></script>
+<script type="text/javascript" src = "js/chat_box_template.js" ></script>
 <script type="text/javascript">
 
 window.addEventListener("load",function(){
@@ -37,6 +38,8 @@ window.addEventListener("load",function(){
 	for(i = 0; i < 10; i++){
 		todo.createNew(testOption);
 	}
+
+	chatTest();
 	
 	//},2000);
 
@@ -54,32 +57,25 @@ window.addEventListener("load",function(){
 
 	<div class= "staticBar" id = "topNav" >
 		<div class = "container" id = "viewControlToggle">
-			<div class="col-md-6 col-sm-6 col-xs-6 col-xl-6 panelToggle" id = "toDoBnt" switchAim = "0">To-do</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 col-xl-6 panelToggle" id = "toDoBnt" switchAim = "0">To-Dos</div>
 			<div class="col-md-6 col-sm-6 col-xs-6 col-xl-6 panelToggle panelToggle_selected" id = "chatBnt" switchAim = "1">Chat</div>
 		</div>
 	</div>
 
 	<div class = "container container2Xwide" id = "mainScroll" >
 		<div class="row">
-			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "to_do_panel" >
-				
+				<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "to_do_panel" >	
 				<div id = "todoListBox">
-					<div id = "emptyHolder">All Clear</div>
+						<div id = "emptyHolder">All Clear</div>
 				</div>
-
-
-
-			</div>
-			<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "chat_panel" >
-				
-				<div id = "chatBox">
-					<div id = "emptyHolder">All Clear</div>
-
-
-			</div>
+				</div>
+				<div class = "col-md-6 col-sm-6 col-xs-6 col-xl-6 panel" id = "chat_panel" >
+					<div id = "chatBox">
+						<div id ="noMessageHolder">No Message</div>
+				    </div>
+			    </div>
 		</div>
 	</div>
-
 </div>
 
 

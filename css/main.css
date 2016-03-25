@@ -25,10 +25,10 @@ body{
 }
 
 #topNav{
-    background-color: #FF6600;
+    background-color: #E77C6E;
     padding-top: 20px;
     height: 118px;
-    position: absolute;
+    position: fixed;
     z-index: 99;
     left: 0px;
     top:0px;
@@ -37,8 +37,8 @@ body{
 
 #viewControlToggle{
 	margin: auto;
-	border-radius: 8px;
-	background-color: rgba(255,255,255,0.25);
+	border-radius: 4em;
+	background-color: rgba(0,0,0,0.2);
 	width: 60%;
 	height: 50%;
 	position: relative;
@@ -48,13 +48,15 @@ body{
 
 .panelToggle{
 	text-align: center;
-	border-radius: 8px;
+	border-radius: 4em;
 	padding-top: 1.8%;
 	height: 100%;
+	color:#FFF;
 }
 
 .panelToggle_selected{
 	background-color: #FFF;
+	color: #E77C6E;
 }
 
 .row{
@@ -67,12 +69,14 @@ body{
 
 .container2Xwide{
 	width: 200% !important;
-	position: absolute;
+	position: relative;
 	height: 100%;
 	top:0px;
-	left:0px;
-	-webkit-transform: translate(0%);
-	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	left:-100%;
+	-webkit-transform:translateZ(0px);
+	-webkit-transition: left 0.5s ease-in-out;
+	/*-webkit-transform: translateX(-50%) translateZ(0px);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;*/
 }
 
 .panel{
